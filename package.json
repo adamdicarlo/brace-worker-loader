@@ -1,0 +1,14 @@
+{
+  "name": "brace-worker-loader",
+  "version": "0.0.0",
+  "author": "Adam DiCarlo <adam.dicarlo@gmail.com>",
+  "description": "Webpack loader for brace (Ace Editor) WebWorkers",
+  "peerDependencies": {
+    "webpack": ">=0.9 <2"
+  },
+  "dependencies": {
+    "loader-utils": "0.2.x",
+    "uglify-js": "^2.4.23"
+  },
+  "license": "MIT"
+}
