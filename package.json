@@ -5,8 +5,9 @@
   "description": "Webpack loader for brace (Ace Editor) WebWorkers",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adamdicarlo/brace-worker-loader.git"
+    "url": "adamdicarlo/brace-worker-loader"
   },
+  "homepage": "https://github.com/adamdicarlo/brace-worker-loader",
   "peerDependencies": {
     "webpack": ">=0.9 <2"
   },
