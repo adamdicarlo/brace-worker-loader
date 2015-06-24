@@ -1,6 +1,6 @@
 {
   "name": "brace-worker-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Adam DiCarlo <adam.dicarlo@gmail.com>",
   "description": "Webpack loader for brace (Ace Editor) WebWorkers",
   "repository": {
