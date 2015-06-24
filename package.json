@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "author": "Adam DiCarlo <adam.dicarlo@gmail.com>",
   "description": "Webpack loader for brace (Ace Editor) WebWorkers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adamdicarlo/brace-worker-loader.git"
+  },
   "peerDependencies": {
     "webpack": ">=0.9 <2"
   },
