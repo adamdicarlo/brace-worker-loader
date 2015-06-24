@@ -1,9 +1,9 @@
-# worker loader for webpack
+# Brace (Ace Editor) worker loader (inliner) for webpack
 
 ## Usage
 
 ``` javascript
-var MyWorker = require("ace-worker!./my-worker.js");
+var MyWorker = require("brace-worker!./my-worker.js");
 
 ```
 
