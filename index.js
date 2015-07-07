@@ -12,6 +12,9 @@ var util = require('util')
 module.exports = function () {}
 module.exports.pitch = function inlineAceWorker (request) {
   if (!this.webpack) throw new Error('Only usable with webpack')
+  this.cacheable && this.cacheable()
+  this.addDependency(this.resourcePath)
+
   var callback = this.async()
   var query = loaderUtils.parseQuery(this.query)
   var outputOptions = {
@@ -42,6 +45,15 @@ module.exports.pitch = function inlineAceWorker (request) {
   })
   workerCompiler.runAsChild(function(err, entries, compilation) {
     if (err) return callback(err)
+
+    compilation.fileDependencies.forEach(function (dep) {
+      this.addDependency(dep)
+    }, this)
+
+    compilation.contextDependencies.forEach(function (dep) {
+      this.addContextDependency(dep)
+    }, this)
+
     if (entries[0]) {
       var workerFile = entries[0].files[0]
       var workerId = query.id
@@ -53,7 +65,7 @@ module.exports.pitch = function inlineAceWorker (request) {
     } else {
       return callback(null, null)
     }
-  })
+  }.bind(this))
 }
 
 function minify (code) {
